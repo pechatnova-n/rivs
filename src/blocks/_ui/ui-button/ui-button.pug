@@ -1,0 +1,20 @@
+mixin ui-button(text, mods)
+  -
+    const baseName = 'ui-button'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '_' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  if (attributes.href)
+    a.ui-button(class=allMods)&attributes(attributes)=text
+
+      block
+
+  else
+    button.ui-button(class=allMods)&attributes(attributes)=text
+      block
