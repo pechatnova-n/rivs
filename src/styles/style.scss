@@ -1,7 +1,8 @@
-@use "sass:map";
-@use "sass:math";
-@use "sass:string";
+@use 'sass:map';
+@use 'sass:math';
+@use 'sass:string';
 @import '../../node_modules/normalize.css/normalize.css';
+@import 'utils/variables';
 @import 'utils/**/*';
 @import 'helpers/mixins';
 @import 'helpers/base';

@@ -1,4 +1,4 @@
-mixin picture(fileName)
+mixin picture(fileName, mobileFileName)
   -
     var file = {
       getTitle(filename) {
@@ -13,20 +13,44 @@ mixin picture(fileName)
         return extension;
       },
       getPath(title, extension) {
-        var path = 'dist/images/' + title + "." + extension;
+        var path = '../../images/' + title + "." + extension;
         return path;
       },
     };
     var fileTitle = file.getTitle(fileName);
     var fileExtension = file.getExtension(fileName);
-  //- img.picture(src=(file.getPath(fileTitle, fileExtension)) alt="")
   picture.picture&attributes(attributes)
     source(
       type="image/webp"
       srcset=(file.getPath(fileTitle, "webp") + " 1x")
-      alt=(file.getPath(fileTitle, "webp") + " 1x")
+      alt=fileName
+      class="lazyload" 
+      media="(min-width: 769px)" 
     )
+    source(
+      type="image/jpeg"
+      srcset=(file.getPath(fileTitle, "jpg") + " 1x")
+      alt=fileName
+      class="lazyload" 
+      media="(min-width: 769px)"  
+    )
+    if mobileFileName
+      source(
+        type="image/webp"
+        srcset=(file.getPath(fileTitle + '-mob', "webp") + " 1x")
+        alt=fileName
+        class="lazyload" 
+        media="(max-width: 768px)"  
+      )
+      source(
+        type="image/jpeg"
+        srcset=(file.getPath(fileTitle + '-mob', "jpg") + " 1x")
+        alt=fileName
+        class="lazyload" 
+        media="(max-width: 768px)" 
+      )
     img.picture__img(
-      src=(file.getPath(fileTitle, fileExtension))
-      alt=(file.getPath(fileTitle, fileExtension))
+      class="lazyload" 
+      data-src=(file.getPath(fileTitle, fileExtension))
+      alt=fileName
     )
