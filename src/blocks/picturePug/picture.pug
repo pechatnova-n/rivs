@@ -19,22 +19,24 @@ mixin picture(fileName, mobileFileName)
     };
     var fileTitle = file.getTitle(fileName);
     var fileExtension = file.getExtension(fileName);
-  picture.picture&attributes(attributes)
-    source(
-      type="image/webp"
-      srcset=(file.getPath(fileTitle, "webp") + " 1x")
-      alt=fileName
-      class="lazyload" 
-      media="(min-width: 769px)" 
-    )
-    source(
-      type="image/jpeg"
-      srcset=(file.getPath(fileTitle, "jpg") + " 1x")
-      alt=fileName
-      class="lazyload" 
-      media="(min-width: 769px)"  
-    )
-    if mobileFileName
+
+
+  if mobileFileName
+    picture.picture&attributes(attributes)
+      source(
+        type="image/webp"
+        srcset=(file.getPath(fileTitle, "webp") + " 1x")
+        alt=fileName
+        class="lazyload" 
+        media="(min-width: 769px)" 
+      )
+      source(
+        type="image/jpeg"
+        srcset=(file.getPath(fileTitle, "jpg") + " 1x")
+        alt=fileName
+        class="lazyload" 
+        media="(min-width: 769px)"  
+      )
       source(
         type="image/webp"
         srcset=(file.getPath(fileTitle + '-mob', "webp") + " 1x")
@@ -49,8 +51,28 @@ mixin picture(fileName, mobileFileName)
         class="lazyload" 
         media="(max-width: 768px)" 
       )
-    img.picture__img(
-      class="lazyload" 
-      data-src=(file.getPath(fileTitle, fileExtension))
-      alt=fileName
-    )
+      img.picture__img(
+        class="lazyload" 
+        data-src=(file.getPath(fileTitle, fileExtension))
+        alt=fileName
+      )
+      
+  else
+    picture.picture&attributes(attributes)
+      source(
+        type="image/webp"
+        srcset=(file.getPath(fileTitle, "webp") + " 1x")
+        alt=fileName
+        class="lazyload" 
+      )
+      source(
+        type="image/jpeg"
+        srcset=(file.getPath(fileTitle, "jpg") + " 1x")
+        alt=fileName
+        class="lazyload" 
+      )
+      img.picture__img(
+        class="lazyload" 
+        data-src=(file.getPath(fileTitle, fileExtension))
+        alt=fileName
+      )
