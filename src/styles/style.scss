@@ -1,7 +1,5 @@
-@use 'sass:map';
-@use 'sass:math';
-@use 'sass:string';
-@import '../../node_modules/normalize.css/normalize.css';
+@import './core/core';
+@import './core/reset';
 @import 'utils/variables';
 @import 'utils/**/*';
 @import 'helpers/mixins';
@@ -13,7 +11,4 @@
 @import './components/**/*';
 @import 'section/**/*';
 @import 'pages/**/*';
-
-// BLOCKS
-
 @import '../blocks/**/*';
