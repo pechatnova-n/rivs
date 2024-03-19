@@ -12,8 +12,9 @@ export const select = () => {
   selects.find('.select__list li p').on('click', function (e) {
     e.stopPropagation(); // блокируем всплытие события
     const input = $(this).closest('.select').find('input');
-    input.val($(this).text());
+    const text = $(this).text();
     input.trigger('input');
+    input.attr('value', text);
     $(this).closest('.select').removeClass('--active');
   });
 
