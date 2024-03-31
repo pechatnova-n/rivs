@@ -70,3 +70,29 @@ $breakpoints: (
 $transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
 $transition-duration: 0.5s;
 $transition: $transition-duration $transition-timing-function;
+
+//Количество колонок по сетке
+$col-count-m: 4;
+$col-count-t: 4;
+$col-count-d: 16;
+//Количество колонок по сетке
+
+//Боковые отступы по краям
+$col-pad-m: rem(12px);
+$col-pad-t: rem(12px);
+$col-pad-d: rem(24px);
+//Боковые отступы по краям
+
+//Промежутки между колонками
+$col-gap-m: rem(12px);
+$col-gap-t: rem(12px);
+$col-gap-d: rem(24px);
+//Промежутки между колонками
+
+$col-width-m: '((100vw - (#{$col-pad-m} * 2) - (#{$col-gap-m} * #{$col-count-m - 1})) / #{$col-count-m})';
+$col-width-t: '((100vw - (#{$col-pad-t} * 2) - (#{$col-gap-m} * #{$col-count-t - 1})) / #{$col-count-t})';
+$col-width-d: '((100vw - (#{$col-pad-d} * 2) - (#{$col-gap-d} * #{$col-count-d - 1})) / #{$col-count-d})';
+
+$col-part-m: '(#{$col-width-m} + #{$col-gap-m})';
+$col-part-t: '(#{$col-width-t} + #{$col-gap-t})';
+$col-part-d: '(#{$col-width-d} + #{$col-gap-d})';

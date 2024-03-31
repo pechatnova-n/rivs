@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-export const input = () => {
+export const inputUi = () => {
   const inputsContainers = $('[data-input-parent]');
 
   if (inputsContainers.length > 0) {

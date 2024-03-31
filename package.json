@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^4.0.31",
+    "accordion-js": "^3.3.4",
     "button": "^1.1.1",
     "flatpickr": "^4.6.13",
     "jquery": "^3.7.1",
