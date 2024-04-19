@@ -5,9 +5,17 @@
 $fs: 16px;
 $font: TT Rounds Neue;
 
+@function rem($size) {
+  @return math.div($size, $fs) * 1rem;
+}
+
+@function getVw($px, $width) {
+  @return $px / $width * 1vw;
+}
+
 html {
   @media (min-width: 320px) {
-    font-size: getVw($fs, 340px / 100);
+    font-size: getVw($fs, 375px / 100);
   }
 
   @each $breakpoint in (375px, 576px, 768px, 1024px) {
@@ -58,13 +66,6 @@ $breakpoints: (
   } @else if $direction == 'md' {
     @return '(min-width: #{breakpoint(m)}) and (max-width: #{breakpoint(d) - 1px})';
   }
-}
-@function rem($size) {
-  @return math.div($size, $fs) * 1rem;
-}
-
-@function getVw($px, $width) {
-  @return $px / $width * 1vw;
 }
 
 $transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
