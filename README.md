@@ -4,6 +4,11 @@
 * от 23.04.24
   * обновлены брейкпоинты
   * добавлен блок с z-index в core/core.scss
+* от 19.04.24
+  * styles/utils: functions.scss, utils.scss - удалены
+  * styles/cores: core.scss, reset.scss - отредактированы
+  * Обновлены мета теги
+  * Добавлена папка js/components - для js логики
 * от 1.04.24
   * добавлен миксин picture-random
   * добавлен миксин accordion-ui
@@ -12,11 +17,6 @@
 * от 20.03.24
   * ВАЖНО! внесены изменения в фаил select.js, теперь бек может добавлять дефолтные значения к селектам в атрибут value
   * изменения в компоненте picture: исправлен баг, когда при билде проекта не переносились png файлы
-* от 19.04.24
-  * styles/utils: functions.scss, utils.scss - удалены
-  * styles/cores: core.scss, reset.scss - отредактированы
-  * Обновлены мета теги
-  * Добавлена папка js/components - для js логики
 
 
 ## Установка
