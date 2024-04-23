@@ -15,7 +15,7 @@ $font: TT Rounds Neue;
 
 html {
   @media (min-width: 320px) {
-    font-size: getVw($fs, 375px / 100);
+    font-size: getVw($fs, 340px / 100);
   }
 
   @each $breakpoint in (375px, 576px, 768px, 1024px) {
@@ -24,7 +24,7 @@ html {
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1201px) {
     font-size: getVw($fs, 1920px / 100);
   }
 
@@ -37,15 +37,13 @@ html {
 
 $breakpoints: (
   xxl: 1920px,
-  xl: 1680px,
   ll: 1440px,
-  l: 1366px,
-  d: 1280px,
+  d: 1201px,
   t: 1024px,
+  lg: 992px,
   m: 768px,
   s: 576px,
   xs: 375px,
-  xxs: 320px,
 );
 
 @function breakpoint($variant: d) {
@@ -97,3 +95,21 @@ $col-width-d: '((100vw - (#{$col-pad-d} * 2) - (#{$col-gap-d} * #{$col-count-d -
 $col-part-m: '(#{$col-width-m} + #{$col-gap-m})';
 $col-part-t: '(#{$col-width-t} + #{$col-gap-t})';
 $col-part-d: '(#{$col-width-d} + #{$col-gap-d})';
+
+//z-index
+//Для наползающих элементов в общем потоке
+$index-1: 1;
+$index-2: 2;
+$index-4: 3;
+$index-5: 4;
+$index-5: 5;
+//Для наползающих элементов вне потока
+$index-6: 6;
+$index-7: 7;
+$index-8: 8;
+//Для оверлея
+$index-10: 10;
+//Для сайдбаров
+$index-10: 11;
+//Для элементов, перекрывающих все
+$index-20: 20;

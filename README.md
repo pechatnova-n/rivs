@@ -1,6 +1,9 @@
 # vite-bem-template
 
 ## Версии / Изменения:
+* от 23.04.24
+  * обновлены брейкпоинты
+  * добавлен блок с z-index в core/core.scss
 * от 1.04.24
   * добавлен миксин picture-random
   * добавлен миксин accordion-ui

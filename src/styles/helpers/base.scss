@@ -1,15 +1,3 @@
-html {
-  &.lock-scroll { // убрать
-    position: relative;
-    overflow: hidden;
-
-    body {
-      position: relative;
-      overflow: hidden;
-    }
-  }
-}
-
 .wrapper {
   position: relative;
   display: flex;
