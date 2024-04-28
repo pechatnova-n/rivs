@@ -8,7 +8,7 @@ $textarea-background: #f8f4f8;
   border: 1px solid var(--unnamed, #f0e7ef);
   background-color: $textarea-background;
   transition: $transition;
-
+  overflow: hidden;
   &:focus-within {
     border: 1px solid var(--1, #62215b);
     box-shadow: 0px rem(10px) rem(16px) rgba(0, 0, 0, 0.05);
