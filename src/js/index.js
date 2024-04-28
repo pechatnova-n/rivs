@@ -3,10 +3,10 @@ import 'virtual:svg-icons-register';
 import 'lazysizes';
 import { select } from '../blocks/select/select';
 import { accordion } from '../blocks/accordion-ui/accordion-ui';
-import { inputUi } from '../blocks/input/input';
+import { inputReset } from './components/inputReset';
 
 document.addEventListener('DOMContentLoaded', function () {
+  inputReset();
   select();
-  inputUi();
   accordion();
 });
