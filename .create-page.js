@@ -11,7 +11,9 @@ fs.mkdir(`${pagesDir}/${pageName}`, () => {
     error = true
     console.log('html файл уже существует')
   } else {
-    fs.writeFileSync(`${pagesDir}/${pageName}/index.html`, `<template data-type="pug" data-src="${pageName}.pug"></template>`)
+    fs.writeFileSync(`${pagesDir}/${pageName}/index.html`, 
+      `<template data-type="pug" data-src="${pageName}.pug"></template><script type='module' src='../../js/index.js'></script>`
+    )
   }
   if (fs.existsSync(`${pagesDir}/${pageName}/${pageName}.pug`)) {
     error = true

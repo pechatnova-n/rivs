@@ -7,6 +7,7 @@
   "scripts": {
     "start": "gulp pugMixins && vite",
     "build": "gulp pugMixins && vite build && node .change-path.js && gulp copyFiles",
+    "scripts": "gulp pugMixins && vite build --mode scripts && node .change-path.js && gulp copyFiles",
     "preview": "vite preview",
     "block": "node .create-block.js",
     "page": "node .create-page.js"
