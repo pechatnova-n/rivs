@@ -1,5 +1,5 @@
 @layer defaults,libs, components, utilities;
-@import './core/core';
+@import './core/**/*';
 @import './core/reset';
 @import 'utils/**/*';
 @import 'helpers/mixins';

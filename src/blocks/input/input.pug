@@ -1,6 +1,7 @@
 mixin input(name)
-  .input-wrapper(data-input-parent='')
-    .input-wrapper__placeholder
-      |#{attributes.placeholder}
-    input.input(data-input='' required autocomplete="off" name=name?name:'')&attributes(attributes)
-    +reset.input-wrapper-svg
+  .input-ui.custom-placeholder(data-input-parent='')
+    input(data-input='' required name=name?name:'')&attributes(attributes)
+    .custom-placeholder__service
+      span
+        |#{attributes.placeholder}
+      +reset.custom-placeholder__reset

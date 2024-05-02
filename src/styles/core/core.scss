@@ -1,13 +1,47 @@
 @use 'sass:map';
 @use 'sass:math';
 @use 'sass:string';
-
-$fs: 16px;
-$font: TT Rounds Neue;
-
 @function rem($size) {
   @return math.div($size, $fs) * 1rem;
 }
+
+//---Настраиваемые значения---//
+$fs: 16px;
+$font: TT Rounds Neue;
+
+//Custom placeholder
+$custom-placeholder-top: rem(12px);
+$custom-placeholder-left: rem(24px);
+$custom-placeholder-scale: 0.6;
+//Custom placeholder
+
+//transition
+$transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+$transition-duration: 0.5s;
+$transition: $transition-duration $transition-timing-function;
+//transition
+
+//Количество колонок
+$col-count-m: 4;
+$col-count-t: 4;
+$col-count-d: 16;
+//Количество колонок
+
+//Боковые отступы по краям
+$col-pad-m: rem(12px);
+$col-pad-t: rem(12px);
+$col-pad-d: rem(24px);
+//Боковые отступы по краям
+
+//Промежутки между колонками
+$col-gap-m: rem(12px);
+$col-gap-t: rem(12px);
+$col-gap-d: rem(24px);
+//Промежутки между колонками
+
+//---Настраиваемые значения---//
+
+//---все что ниже не трогать!!!---//
 
 @function getVw($px, $width) {
   @return $px / $width * 1vw;
@@ -66,28 +100,6 @@ $breakpoints: (
   }
 }
 
-$transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
-$transition-duration: 0.5s;
-$transition: $transition-duration $transition-timing-function;
-
-//Количество колонок по сетке
-$col-count-m: 4;
-$col-count-t: 4;
-$col-count-d: 16;
-//Количество колонок по сетке
-
-//Боковые отступы по краям
-$col-pad-m: rem(12px);
-$col-pad-t: rem(12px);
-$col-pad-d: rem(24px);
-//Боковые отступы по краям
-
-//Промежутки между колонками
-$col-gap-m: rem(12px);
-$col-gap-t: rem(12px);
-$col-gap-d: rem(24px);
-//Промежутки между колонками
-
 $col-width-m: '((100vw - (#{$col-pad-m} * 2) - (#{$col-gap-m} * #{$col-count-m - 1})) / #{$col-count-m})';
 $col-width-t: '((100vw - (#{$col-pad-t} * 2) - (#{$col-gap-m} * #{$col-count-t - 1})) / #{$col-count-t})';
 $col-width-d: '((100vw - (#{$col-pad-d} * 2) - (#{$col-gap-d} * #{$col-count-d - 1})) / #{$col-count-d})';
@@ -113,3 +125,28 @@ $index-10: 10;
 $index-10: 11;
 //Для элементов, перекрывающих все
 $index-20: 20;
+
+//custom placeholder
+@mixin custom-placeholder {
+  &:focus-within {
+    span {
+      top: $custom-placeholder-top;
+      transform: $custom-placeholder-left;
+      transform: scale($custom-placeholder-scale);
+    }
+  }
+  input:not(:placeholder-shown) ~ .custom-placeholder__service,
+  textarea:not(:placeholder-shown) + .custom-placeholder__service {
+    span {
+      top: $custom-placeholder-top;
+      left: $custom-placeholder-left;
+      transform: scale($custom-placeholder-scale);
+    }
+
+    svg {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+//custom placeholder

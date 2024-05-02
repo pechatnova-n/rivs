@@ -1,23 +1,13 @@
 import $ from 'jquery';
 
-export const inputUi = () => {
+export const inputReset = () => {
   const inputsContainers = $('[data-input-parent]');
-
   if (inputsContainers.length > 0) {
     inputsContainers.each(function () {
       const container = $(this);
       const input = container.find('[data-input]');
-      const reset = container.find('.input-wrapper-svg');
-
+      const reset = container.find('.custom-placeholder__reset');
       if (!input.length) return;
-
-      input.on('input', function () {
-        if (input.val().trim() !== '') {
-          container.addClass('filled');
-        } else {
-          container.removeClass('filled');
-        }
-      });
 
       if (reset.length) {
         reset.on('click', function () {
