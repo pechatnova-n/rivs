@@ -5,6 +5,12 @@ block variables
     const pageName = 'ui'
     const pageTitle = 'ui'
 
+block modal
+  //- +empty-modal
+  +response-modal(id = 'response-modal')
+  +test-modal
+
+
 block content
   main
     .inner
@@ -20,6 +26,12 @@ block content
       br
       br
       +button("Кнопка")
+      br
+      br
+      +button("модалка-1")(data-modal-open='response-modal')
+      br
+      br
+      +button("модалка-2")(data-modal-open='test-modal')
       br
       br
       +checkbox("текст")
