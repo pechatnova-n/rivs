@@ -11,13 +11,15 @@ html(lang='ru')
       meta(name="format-detection" content="telephone=no")
       meta(content='ie=edge' http-equiv='x-ua-compatible')
       link(href='https://vitejs.dev/logo.svg' rel='icon' type='image/x-icon')
-  body
+  body(data-barba="wrapper")
+    +transition-screen
     .wrapper
-      .modal-block
-        block modal 
       block header
         include ../blocks/header/header
-      block content
+      .modal-block
+        block modal 
+      .content(data-barba="container" data-barba-namespace=pageName)
+        block content
       block footer
         include ../blocks/footer/footer
     block scripts
