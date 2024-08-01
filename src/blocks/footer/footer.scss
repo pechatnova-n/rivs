@@ -1,3 +1,5 @@
+$marg-b8: 8px;
+
 .footer {
   flex: 0 1;
   background-color: #FFF;
@@ -6,6 +8,10 @@
   line-height: 21px;
   color: #6F7173;
 
+  &__footer-contacts-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
   &__footer-link {
     font-size: 14px;
@@ -24,11 +30,52 @@
 
   &__footer-text {
     text-transform: uppercase;
+    &_footer-text-right {
+      text-align: right;
+      text-transform: uppercase;
+    }
   }
 
   &__footer-copy-right {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     font-size: 14px;
+  }
+}
+
+.socials {
+    display: inline-flex;
+    column-gap: 2px;
+    align-items: center;
+  &__socials-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      background-color: #D8D9DA;
+  }
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  &__contacts-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__contacts-title {
+    color: #6F7173;
+    text-transform: uppercase;
+    margin-bottom: $marg-b8;
+  }
+  &__contacts-link {
+    font-size: 24px;
+    line-height: 26px;
+    font-family: $druk;
+    color: #1B1B1B;
+    text-transform: uppercase;
+    margin-bottom: $marg-b8;
   }
 }
