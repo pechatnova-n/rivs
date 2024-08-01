@@ -1,3 +1,34 @@
 .footer {
   flex: 0 1;
+  background-color: #FFF;
+  font-family: $font-inter;
+  font-size: 14px;
+  line-height: 21px;
+  color: #6F7173;
+
+
+  &__footer-link {
+    font-size: 14px;
+    color: #6F7173;
+    &_footer-link-uppercase {
+      text-transform: uppercase;
+      color: #1B1B1B;
+    }
+  }
+
+  &__footer-logo {
+    display: inline-block;
+    margin-left: 7px;
+
+  }
+
+  &__footer-text {
+    text-transform: uppercase;
+  }
+
+  &__footer-copy-right {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    font-size: 14px;
+  }
 }

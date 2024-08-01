@@ -12,3 +12,18 @@
   font-display: swap;
   src: url('../fonts/ttroundsneue-regular.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'Inter 18pt';
+  src: url('../fonts/Inter18pt-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Druk Cyr';
+  src: url('../fonts/DrukCyr-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
