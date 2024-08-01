@@ -43,15 +43,11 @@ $marg-b8: 8px;
 
   &__footer-text {
     text-transform: uppercase;
-    &_footer-text-right {
-      text-align: right;
-      text-transform: uppercase;
-    }
   }
 
   &__footer-copy-right {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 3fr 2fr 1fr;
     font-size: 14px;
     padding: 32px 0;
   }
