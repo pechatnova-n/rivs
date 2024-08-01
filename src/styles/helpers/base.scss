@@ -4,12 +4,12 @@
   flex-direction: column;
   min-height: 100vh;
   margin: 0 auto;
-  font-family: $font;
+  font-family: $font-inter;
 
   .inner {
-    max-width: 1340px;
+    max-width: 1920px;
     margin: 0 auto;
-    padding: 0 25px;
+    padding: 0 32px;
 
     @media #{media('<',l)} {
       max-width: 100%;
