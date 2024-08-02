@@ -1,10 +1,7 @@
 .footer
   .inner
 
-    button.btn-back-to-up(type='button' class='btn-back-to-up_for-footer')
-      <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M11.3137 6.58579L9.8995 8L6.65697 4.75748L4.65697 4.75725L1.41421 8L0 6.58579L5.65685 0.928932L11.3137 6.58579Z" fill="#1B1B1B"/>
-      </svg>
+    +btn-back-to-up(type='button' class='btn-back-to-up_for-footer')
 
     nav.footer__nav
       .footer__nav-col
@@ -116,27 +113,7 @@
 
     section.footer__contacts-block
       +socials
-
-      .contacts
-        .contacts__item
-          header.contacts__title телефон
-          a.contacts__link(href="tel:+7 812 321-57-05") 8 812 321-57-05
-          a.contacts__link(href="tel:+7 812 321-57-04") 8 812 321-57-04
-
-        .contacts__item
-          header.contacts__title факс
-          a.contacts__link(href="tel:+7 812 321-57-05") +7 812 321-57-05
-
-        .contacts__item
-          header.contacts__title почта
-          a.contacts__link(href="mailto:rivs@rivs.ru") rivs@rivs.ru
-
-
-
-
-
-
-
+      +contacts
 
     footer.footer__copy-right
       span.footer__text_text-copy  © РИВС 2024

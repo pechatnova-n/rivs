@@ -1,0 +1,25 @@
+mixin contacts(mods)
+  -
+    const baseName = 'contacts'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '_' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .contacts(class=allMods)&attributes(attributes)
+    .contacts__item
+      header.contacts__title телефон
+      a.contacts__link(href="tel:+7 812 321-57-05") 8 812 321-57-05
+      a.contacts__link(href="tel:+7 812 321-57-04") 8 812 321-57-04
+
+    .contacts__item
+      header.contacts__title факс
+      a.contacts__link(href="tel:+7 812 321-57-05") +7 812 321-57-05
+
+    .contacts__item
+      header.contacts__title почта
+      a.contacts__link(href="mailto:rivs@rivs.ru") rivs@rivs.ru

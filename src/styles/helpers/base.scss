@@ -16,6 +16,7 @@ $bg-decor: #D8D9DA;
     max-width: 1920px;
     margin: 0 auto;
     padding: 0 32px;
+    position: relative;
 
     @media #{media('<',l)} {
       max-width: 100%;

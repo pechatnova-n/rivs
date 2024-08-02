@@ -1,0 +1,26 @@
+.btn-back-to-up {
+  position: relative;
+  border: none;
+
+  width: 60px;
+  height: 60px;
+  background-color: $bg-decor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color .6s ease-in-out;
+  &_for-footer {
+    position: absolute;
+    top: rem(32px);
+    right: rem(32px);
+  }
+  &:hover {
+    background-color: $color-active;
+    transition: background-color .6s ease-in-out;
+  }
+
+  @media(max-width: 768px) {
+    display: none;
+  }
+}

@@ -1,33 +1,4 @@
 
-
-
-
-.btn-back-to-up {
-  border: none;
-
-  width: 60px;
-  height: 60px;
-  background-color: $bg-decor;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color .6s ease-in-out;
-  &_for-footer {
-    position: absolute;
-    top: rem(32px);
-    right: rem(32px);
-  }
-  &:hover {
-    background-color: $color-active;
-    transition: background-color .6s ease-in-out;
-  }
-
-  @media(max-width: 768px) {
-    display: none;
-  }
-}
-
 .footer {
   position: relative;
   flex: 0 1;
@@ -49,6 +20,10 @@
     height: rem(2px);
     width: 50%;
     content: "";
+  }
+
+  &__inner {
+    position: relative;
   }
 
   &__contacts-block {
@@ -214,44 +189,3 @@
 
 
 
-.contacts {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: space-between;
-  &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  &__title {
-    font-size: rem(14px);
-    line-height: rem(21px);
-    color: $main-text;
-    text-transform: uppercase;
-    margin-bottom: rem(8px);
-  }
-  &__link {
-    font-size: rem(24px);
-    line-height: rem(26px);
-    font-family: $druk;
-    color: $title-text;
-    text-transform: uppercase;
-    margin-bottom: rem(8px);
-  }
-
-  @media(max-width: 768px) {
-    margin-bottom: rem(24px);
-    &__title {
-      font-size: rem(12px);
-    }
-    &__link {
-      font-size: rem(20px);
-      line-height: rem(22px);
-    }
-  }
-  @media(max-width: 375px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: rem(24px);
-  }
-}
