@@ -26,8 +26,11 @@ $bg-decor: #D8D9DA;
     background-color: $color-active;
     transition: background-color .6s ease-in-out;
   }
-}
 
+  @media(max-width: 768px) {
+    display: none;
+  }
+}
 
 .footer {
   position: relative;
@@ -35,10 +38,8 @@ $bg-decor: #D8D9DA;
   background-color: $bg-default;
   font-family: $font-inter;
   font-size: rem(14px);
-  line-height: 21px;
+  line-height: rem(21px);
   color: $main-text;
-
-
 
   a:hover {
     color: $color-active;
@@ -64,9 +65,9 @@ $bg-decor: #D8D9DA;
   &__link {
     font-size: rem(14px);
     color: $main-text;
-    &_link-uppercase {
+    &_confident {
       text-transform: uppercase;
-      color: $title-text;
+      color: $main-text;
     }
   }
 
@@ -138,6 +139,81 @@ $bg-decor: #D8D9DA;
     margin-bottom: rem(12px);
     color: $main-text;
   }
+
+  @media(max-width: 1200px) {
+    &__nav {
+      display: none;
+    }
+    &::before {
+      display: none;
+    }
+  }
+  @media(max-width: 768px) {
+    .footer {
+
+      &__contacts-block {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: rem(24px) 0;
+      }
+
+      &__link {
+        font-size: rem(10px);
+        &_confident {
+          grid-area: confident;
+        }
+      }
+
+      &__copy-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "confident done"
+            "copy .";
+        justify-content: space-between;
+        row-gap: 16px;
+
+        font-size: rem(10px);
+        padding: rem(16px) 0 rem(24px);
+      }
+
+      &__text {
+        text-transform: uppercase;
+        white-space: nowrap;
+        &_text-copy {
+          grid-area: copy;
+          white-space: nowrap;
+        }
+        &_text-done {
+          grid-area: done;
+          white-space: nowrap;
+          text-align: right;
+        }
+      }
+      }
+    }
+  @media(max-width: 375px) {
+    .footer {
+      &__copy-right {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "confident confident"
+            "copy done";
+      }
+      &__text {
+        &_text-copy {
+          grid-area: copy;
+          white-space: nowrap;
+        }
+        &_text-done {
+          grid-area: done;
+          text-align: right;
+          white-space: nowrap;
+        }
+      }
+    }
+
+  }
 }
 
 .socials {
@@ -152,6 +228,14 @@ $bg-decor: #D8D9DA;
       height: rem(60px);
       background-color: $bg-decor;
   }
+
+  @media(max-width: 768px) {
+    column-gap: rem(8px);
+    &__link {
+      width: rem(40px);
+      height: rem(40px);
+    }
+  }
 }
 
 .contacts {
@@ -164,6 +248,8 @@ $bg-decor: #D8D9DA;
     align-items: flex-start;
   }
   &__title {
+    font-size: rem(14px);
+    line-height: rem(21px);
     color: $main-text;
     text-transform: uppercase;
     margin-bottom: rem(8px);
@@ -175,5 +261,21 @@ $bg-decor: #D8D9DA;
     color: $title-text;
     text-transform: uppercase;
     margin-bottom: rem(8px);
+  }
+
+  @media(max-width: 768px) {
+    margin-bottom: rem(24px);
+    &__title {
+      font-size: rem(12px);
+    }
+    &__link {
+      font-size: rem(20px);
+      line-height: rem(22px);
+    }
+  }
+  @media(max-width: 375px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: rem(24px);
   }
 }
