@@ -62,22 +62,11 @@
 
   &__nav {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
     column-gap: rem(20px);
     padding: rem(30px) 0 rem(140px);
     border-bottom: 1px solid $bg-decor;
-  }
-
-  &__nav-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-between;
-    column-gap: rem(45px);
-  }
-
-  &__nav-subcol {
-
-
   }
 
   &__nav-item {
