@@ -1,0 +1,27 @@
+.socials {
+  position: relative;
+  display: inline-flex;
+  column-gap: rem(2px);
+  align-items: center;
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(60px);
+    height: rem(60px);
+    background-color: $bg-decor;
+    transition: background-color .6s ease-in-out;
+    &:hover {
+      background-color: $color-active;
+      transition: background-color .6s ease-in-out;
+    }
+  }
+
+  @media(max-width: 768px) {
+    column-gap: rem(8px);
+    &__link {
+      width: rem(40px);
+      height: rem(40px);
+    }
+  }
+}

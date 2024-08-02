@@ -1,9 +1,5 @@
 
-$color-active: #DB2E27;
-$bg-default: #FFF;
-$main-text: #6F7173;
-$title-text: #1B1B1B;
-$bg-decor: #D8D9DA;
+
 
 
 .btn-back-to-up {
@@ -216,27 +212,7 @@ $bg-decor: #D8D9DA;
   }
 }
 
-.socials {
-    display: inline-flex;
-    column-gap: rem(2px);
-    align-items: center;
-  &__link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: rem(60px);
-      height: rem(60px);
-      background-color: $bg-decor;
-  }
 
-  @media(max-width: 768px) {
-    column-gap: rem(8px);
-    &__link {
-      width: rem(40px);
-      height: rem(40px);
-    }
-  }
-}
 
 .contacts {
   display: grid;
