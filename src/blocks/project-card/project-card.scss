@@ -1,33 +1,55 @@
 .project-card {
+  $comp: &;
   position: relative;
   display: flex;
   justify-content: space-between;
   column-gap: rem(20px);
   padding-bottom: rem(140px);
 
+  @media#{media("<", m)}{
+    column-gap: rem(8px);
+    padding-bottom: rem(48px);
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
+
   &__item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    width: 449px;
-    min-width: 449px;
-    min-height: 540px;
+    width: rem(449px);
+    height: rem(540px);
     border: 1px solid #D8D9DA;
-    padding: 32px;
+    padding: rem(32px);
     cursor: pointer;
-    box-sizing: border-box;
-
+    flex-shrink: 0;
+    flex-grow: 0;
+      @media#{media("<", m)}{
+      height: rem(320px);
+      width: rem(255px);
+      padding: rem(16px);
+    }
+      &:hover {
+      background-color: #D8D9DA;
+      transition: background-color 0.5s linear 0.2s;
+      #{$comp}__info {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.5s linear 0.2s;
+      }
+      #{$comp}__header {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.2s linear;
+      }
+      #{$comp}__content {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.2s linear;
+      }
+    }
   }
-
-  &__item:hover > &__info {
-    display: block;
-    z-index: 2;
-  }
-  &__item:hover > &__main {
-    display: none;
-  }
-
 
   &__header {
     font-family: $druk;
@@ -36,6 +58,11 @@
     line-height: rem(35px);
     color: #1B1B1B;
     text-transform: uppercase;
+      @media#{media("<", m)}{
+      font-size: rem(20px);
+      line-height: rem(22px);
+      margin-bottom: rem(16px);
+    }
   }
 
   &__content {
@@ -50,73 +77,31 @@
     line-height: rem(35px);
     color: #DB2E27;
     align-self: end;
+      @media#{media("<", m)}{
+      font-size: rem(20px);
+      line-height: rem(22px);
+    }
   }
+
   &__image {
     align-self: end;
-    width: 140px;
-    height: 140px;
+    width: rem(140px);
+    height: rem(140px);
+      @media#{media("<", m)}{
+        width: rem(79px);
+        height: rem(79px);
+    }
   }
   &__info {
-    display: none;
-    position: absolute;
-    inset: 0;
-    background-color: #D8D9DA;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
     color: #1B1B1B;
     font-family: $font-inter;
     font-size: rem(24px);
     font-weight: 400;
     line-height: rem(36px);
-    padding: rem(32px);
-    z-index: -1;
   }
-
-  @media(max-width: 768px) {
-    column-gap: rem(8px);
-    padding-bottom: rem(48px);
-    justify-content: flex-start;
-    overflow-x: scroll;
-
-    &__item {
-      min-height: 320px;
-      width: 255px;
-      min-width: 255px;
-      padding: 16px;
-      flex-grow: 0;
-      flex-shrink: 0;
-    }
-
-    &__header {
-      font-size: rem(20px);
-      line-height: rem(22px);
-      margin-bottom: rem(16px);
-    }
-
-    &__content {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    &__number {
-      font-size: rem(20px);
-      line-height: rem(22px);
-    }
-    &__image {
-      align-self: end;
-      width: 79px;
-      height: 79px;
-
-    }
-    &__info {
-      display: block;
-      position: relative;
-      inset: 0;
-      font-size: rem(14px);
-      line-height: rem(21px);
-      color: #6F7173;
-      background-color: transparent;
-      padding: 0;
-      flex-grow: 1;
-    }
-  }
-
 }
+
+

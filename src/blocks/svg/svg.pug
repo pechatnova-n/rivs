@@ -2,9 +2,48 @@ mixin reset
   svg(class=attributes.class xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 48 48' fill='none')
     path(d='M18.15 18.15L29.85 29.85' stroke='#A5B7B3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
     path(d='M18.15 29.85L29.85 18.15' stroke='#A5B7B3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-mixin tick 
+mixin tick
   svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
     path(d='M20 7L14.6093 13.4688C12.4732 16.0322 11.4051 17.3139 10 17.3139C8.59488 17.3139 7.52681 16.0322 5.39067 13.4688L4 11.8' stroke='#62215B' stroke-width='2' stroke-linecap='round')
 mixin arrow-bottom
   svg(width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg')
     path(d='M16 17L11 22M11 22L6 17M11 22L11 10C11 8.93913 11.4214 7.92172 12.1716 7.17157C12.9217 6.42143 13.9391 6 15 6L22 6' stroke='#5C5772' stroke-linecap='round' stroke-linejoin='round')
+
+mixin loupe
+  svg(width='141' height='141' viewbox='0 0 141 141' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(d='M65.071 117.637C94.1024 117.637 117.637 94.1025 117.637 65.0711C117.637 36.0396 94.1024 12.505 65.071 12.505C36.0395 12.505 12.5049 36.0396 12.5049 65.0711C12.5049 94.1025 36.0395 117.637 65.071 117.637Z' stroke='#D8D9DA' stroke-width='4' stroke-linecap='round' stroke-linejoin='round')
+    circle(cx='65' cy='65' r='29' stroke='#DB2E27' stroke-width='4' stroke-dasharray='25 25')
+    circle(cx='65' cy='65' r='10' stroke='#1B1B1B' stroke-width='4')
+    path(d='M128.631 128.631L102.245 102.245' stroke='#D8D9DA' stroke-width='4' stroke-linecap='square' stroke-linejoin='round')
+mixin people
+  svg(width='139' height='140' viewbox='0 0 139 140' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(d='M60.3203 113.428H53.5781V79.8364H85.4209V113.428H78.2416H76.2416V115.428V137.469H62.3203V115.428V113.428H60.3203Z' stroke='#D8D9DA' stroke-width='4')
+    circle(cx='69.4997' cy='60.7893' r='8.05346' stroke='#DB2E27' stroke-width='4')
+    path(d='M111.899 113.428H105.157V79.8364H137V113.428H129.821H127.821V115.428V137.469H113.899V115.428V113.428H111.899Z' stroke='#D8D9DA' stroke-width='4')
+    circle(cx='121.079' cy='60.7893' r='8.05346' stroke='#DB2E27' stroke-width='4')
+    path(d='M8.74214 113.428H2V79.8364H33.8428V113.428H26.6635H24.6635V115.428V137.469H10.7421V115.428V113.428H8.74214Z' stroke='#D8D9DA' stroke-width='4')
+    circle(cx='17.9216' cy='60.7893' r='8.05346' stroke='#DB2E27' stroke-width='4')
+    circle(cx='43.2732' cy='34.563' r='8.05346' stroke='#1B1B1B' stroke-width='4')
+    circle(cx='96.6003' cy='34.563' r='8.05346' stroke='#1B1B1B' stroke-width='4')
+    circle(cx='69.4997' cy='10.085' r='8.05346' stroke='#DB2E27' stroke-width='4')
+mixin home
+  svg(width='136' height='142' viewbox='0 0 136 142' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(d='M119 34V17H94V34' stroke='#DB2E27' stroke-width='4')
+    path(d='M15.5996 32.0667H26.0663H134V139.133H15.5996V32.0667Z' stroke='#D8D9DA' stroke-width='4')
+    path(d='M25.5 32.3334V15.3334L69.7 2.8667V32.3334' stroke='#D8D9DA' stroke-width='4')
+    rect(x='2' y='87.6' width='52.6667' height='51.5333' fill='white' stroke='#DB2E27' stroke-width='4')
+    path(d='M91.5332 114.8H105.4H119.267V139.133H105.4H91.5332V114.8Z' stroke='#D8D9DA' stroke-width='4')
+    rect(x='31.4668' y='47.9333' width='23.2' height='22.0667' stroke='#1B1B1B' stroke-width='4')
+    rect(x='63.2002' y='47.9333' width='23.2' height='22.0667' stroke='#1B1B1B' stroke-width='4')
+    rect(x='94.9336' y='47.9333' width='23.2' height='22.0667' stroke='#1B1B1B' stroke-width='4')
+mixin cubs
+  svg(width='106' height='152' viewbox='0 0 106 152' fill='none' xmlns='http://www.w3.org/2000/svg')
+    rect(x='2.75' y='109.667' width='24.5' height='40.3333' stroke='#D8D9DA' stroke-width='4')
+    rect(x='40.75' y='109.667' width='24.5' height='40.3333' stroke='#D8D9DA' stroke-width='4')
+    rect(x='21.75' y='55.8334' width='24.5' height='40.3333' stroke='#1B1B1B' stroke-width='4')
+    rect(x='59.75' y='55.8334' width='24.5' height='40.3333' stroke='#1B1B1B' stroke-width='4')
+    rect(x='40.75' y='2' width='24.5' height='40.3333' stroke='#DB2E27' stroke-width='4')
+    rect(x='78.75' y='109.667' width='24.5' height='40.3333' stroke='#D8D9DA' stroke-width='4')
+
+
+
