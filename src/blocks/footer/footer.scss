@@ -8,9 +8,6 @@
   line-height: rem(21px);
   color: $main-text;
 
-  a:hover {
-    color: $color-active;
-  }
 
   &::before {
     position: absolute;
@@ -31,6 +28,11 @@
     grid-template-columns: 1fr 1fr;
     padding: rem(32px) 0;
     border-bottom: 1px solid $bg-decor;
+    @media#{media("<", m)} {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: rem(24px) 0;
+    }
   }
 
   &__link {
@@ -40,15 +42,47 @@
       text-transform: uppercase;
       color: $main-text;
     }
+    &:hover {
+      color: $color-active;
+    }
+    @media#{media("<", m)} {
+      font-size: rem(10px);
+      &_confident {
+        grid-area: confident;
+      }
+    }
   }
 
   &__logo {
     display: inline-block;
-    margin-left: rem(7px);
+    svg {
+      width: rem(92px);
+      height: rem(10px);
+    }
+    @media#{media("<", m)} {
+      svg {
+        width: rem(73px);
+        height: rem(8px);
+      }
+    }
   }
 
   &__text {
     text-transform: uppercase;
+    @media#{media("<", d)} {
+      text-transform: uppercase;
+      white-space: nowrap;
+      &_text-copy {
+        grid-area: copy;
+        white-space: nowrap;
+      }
+      &_text-done {
+        grid-area: done;
+        white-space: nowrap;
+        text-align: right;
+      }
+    }
+
   }
 
   &__copy-right {
@@ -56,8 +90,25 @@
     grid-template-columns: 3fr 2fr 1fr;
     font-size: rem(14px);
     padding: rem(32px) 0;
-  }
+    @media#{media("<", d)} {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+            "confident done"
+            "copy .";
+      justify-content: space-between;
+      row-gap: 16px;
 
+      font-size: rem(10px);
+      padding: rem(16px) 0;
+    }
+    @media#{media("<", xs)} {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+            "confident confident"
+            "copy done";
+    }
+  }
 
 
   &__nav {
@@ -67,6 +118,9 @@
     column-gap: rem(20px);
     padding: rem(30px) 0 rem(140px);
     border-bottom: 1px solid $bg-decor;
+    @media#{media("<", d)} {
+      display: none;
+    }
   }
 
   &__nav-item {
@@ -98,81 +152,15 @@
     line-height: rem(27px);
     margin-bottom: rem(12px);
     color: $main-text;
+    &:hover {
+      color: $color-active;
+    }
   }
 
-  @media(max-width: 1200px) {
-    &__nav {
-      display: none;
-    }
+  @media#{media("<", d)} {
     &::before {
       display: none;
     }
-  }
-  @media(max-width: 768px) {
-    .footer {
-
-      &__contacts-block {
-        display: flex;
-        flex-direction: column-reverse;
-        padding: rem(24px) 0;
-      }
-
-      &__link {
-        font-size: rem(10px);
-        &_confident {
-          grid-area: confident;
-        }
-      }
-
-      &__copy-right {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "confident done"
-            "copy .";
-        justify-content: space-between;
-        row-gap: 16px;
-
-        font-size: rem(10px);
-        padding: rem(16px) 0 rem(24px);
-      }
-
-      &__text {
-        text-transform: uppercase;
-        white-space: nowrap;
-        &_text-copy {
-          grid-area: copy;
-          white-space: nowrap;
-        }
-        &_text-done {
-          grid-area: done;
-          white-space: nowrap;
-          text-align: right;
-        }
-      }
-      }
-    }
-  @media(max-width: 375px) {
-    .footer {
-      &__copy-right {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "confident confident"
-            "copy done";
-      }
-      &__text {
-        &_text-copy {
-          grid-area: copy;
-          white-space: nowrap;
-        }
-        &_text-done {
-          grid-area: done;
-          text-align: right;
-          white-space: nowrap;
-        }
-      }
-    }
-
   }
 }
 

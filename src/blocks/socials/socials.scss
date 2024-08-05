@@ -3,6 +3,10 @@
   display: inline-flex;
   column-gap: rem(2px);
   align-items: center;
+  @media#{media("<", m)}{
+    column-gap: rem(8px);
+  }
+
   &__link {
     display: flex;
     justify-content: center;
@@ -10,18 +14,23 @@
     width: rem(60px);
     height: rem(60px);
     background-color: $bg-decor;
-    transition: background-color .6s ease-in-out;
+    transition: all .6s ease-in-out;
+    svg {
+      width: rem(25px);
+      height: rem(25px);
+    }
     &:hover {
       background-color: $color-active;
-      transition: background-color .6s ease-in-out;
+      transition: all .6s ease-in-out;
+      svg path {
+        fill: #FFF;
+        transition: all .6s ease-in-out;
+      }
     }
-  }
-
-  @media(max-width: 768px) {
-    column-gap: rem(8px);
-    &__link {
+    @media#{media("<", m)}{
       width: rem(40px);
       height: rem(40px);
     }
   }
+
 }

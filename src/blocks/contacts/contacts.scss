@@ -14,6 +14,9 @@
     color: $main-text;
     text-transform: uppercase;
     margin-bottom: rem(8px);
+    @media#{media("<", m)} {
+      font-size: rem(12px);
+    }
   }
   &__link {
     font-size: rem(24px);
@@ -22,19 +25,15 @@
     color: $title-text;
     text-transform: uppercase;
     margin-bottom: rem(8px);
-  }
-
-  @media(max-width: 768px) {
-    margin-bottom: rem(24px);
-    &__title {
-      font-size: rem(12px);
-    }
-    &__link {
+    @media#{media("<", m)} {
       font-size: rem(20px);
       line-height: rem(22px);
     }
   }
-  @media(max-width: 375px) {
+  @media#{media("<", m)} {
+    margin-bottom: rem(24px);
+  }
+  @media#{media("<", xs)} {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: rem(24px);
