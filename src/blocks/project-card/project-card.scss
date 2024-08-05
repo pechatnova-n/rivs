@@ -1,0 +1,69 @@
+.project-card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  grid-column-gap: rem(20px);
+  padding-bottom: rem(140px);
+
+  &__item {
+    position: relative;
+    border: 1px solid #D8D9DA;
+    padding: rem(32px);
+    cursor: pointer;
+    flex: 1;
+  }
+
+  &__item:hover > &__info {
+    visibility: visible;
+    z-index: 2;
+  }
+  &__item:hover > &__main {
+    pointer-events: none;
+  }
+
+  &__main {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__header {
+    font-family: $druk;
+    font-size: rem(32px);
+    font-weight: 700;
+    line-height: rem(35px);
+    color: #1B1B1B;
+    text-transform: uppercase;
+    margin-bottom: rem(273px);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__number {
+    font-family: $druk;
+    font-size: rem(32px);
+    font-weight: 700;
+    line-height: rem(35px);
+    color: #DB2E27;
+    align-self: end;
+  }
+  &__image {
+    align-self: end;
+  }
+  &__info {
+    visibility: hidden;
+    position: absolute;
+    inset: 0;
+    background-color: #D8D9DA;
+    color: #1B1B1B;
+    font-family: $font-inter;
+    font-size: rem(24px);
+    font-weight: 400;
+    line-height: rem(36px);
+    padding: rem(32px);
+    overflow: hidden;
+    z-index: -1;
+  }
+}
