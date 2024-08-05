@@ -6,7 +6,11 @@
   padding-bottom: rem(140px);
 
   &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
+    height: rem(449px);
     border: 1px solid #D8D9DA;
     padding: rem(32px);
     cursor: pointer;
@@ -14,17 +18,13 @@
   }
 
   &__item:hover > &__info {
-    visibility: visible;
+    display: block;
     z-index: 2;
   }
   &__item:hover > &__main {
-    pointer-events: none;
+    display: none;
   }
 
-  &__main {
-    position: relative;
-    z-index: 1;
-  }
 
   &__header {
     font-family: $druk;
@@ -33,7 +33,6 @@
     line-height: rem(35px);
     color: #1B1B1B;
     text-transform: uppercase;
-    margin-bottom: rem(273px);
   }
 
   &__content {
@@ -53,7 +52,7 @@
     align-self: end;
   }
   &__info {
-    visibility: hidden;
+    display: none;
     position: absolute;
     inset: 0;
     background-color: #D8D9DA;
@@ -63,7 +62,8 @@
     font-weight: 400;
     line-height: rem(36px);
     padding: rem(32px);
-    overflow: hidden;
     z-index: -1;
   }
+
+
 }
