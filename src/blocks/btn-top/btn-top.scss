@@ -1,4 +1,4 @@
-.btn-back-to-up {
+.btn-top {
   position: relative;
   border: none;
 
@@ -18,9 +18,12 @@
   &:hover {
     background-color: $color-active;
     transition: background-color .6s ease-in-out;
+    svg path {
+      fill: #FFF;
+    }
   }
 
-  @media(max-width: 768px) {
+  @media#{media("<", d)}{
     display: none;
   }
 }
