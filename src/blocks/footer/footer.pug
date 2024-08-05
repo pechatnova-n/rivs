@@ -4,8 +4,78 @@
 
     +btn-top(type='button' class='btn-top_for-footer')
 
+    -
+      var list=[
+                {
+                title: "Оборудование",
+                links: ["Флотационное оборудование", "Оборудование для подготовки пульпы", "Классификация", "Конвейеры и питатели", "Насосы", "Гидрометаллургическое оборудование"]
+              },
+                {
+                  title: "Автоматизация",
+                  links: ["Автоматизированные системы управления", "Опробование и аналитический контроль", "Электрооборудование"]
+                },
+                {
+                  title: "Сервис и ЗИП",
+                  links: ["Сервис", "ЗИП"]},
+                {
+                  title: "технология",
+                  links: ["Минералогия", "Обогащение", "Металлургия", "Технологический аудит", "Рудоподготовка", "Полупромышленная установка", "Запуск фабрики", "Аналитическая химия"],
+                },
+                {
+                  title: "Проектирование",
+                  links: "",
+                },
+                {
+                  title: "Пресс-центр",
+                  links: ["Новости", "Научные публикации", "Научно-практические конференции", "Медиатека", "Фирменный стиль" ],
+                },
+                {
+                  title: "О компании",
+                  links: ["История", "Центры компетенций", "Патенты и лицензии"],
+                },
+                {
+                  title: "проекты",
+                  links: "",
+                },
+                {
+                  title: "Карьера",
+                  links: "",
+                },
+                {
+                  title: "Контакты",
+                  links: "",
+                },
+              ]
 
     nav.footer__nav
+      ul.footer__nav-col
+        .footer__nav-item
+          each val in list
+            a.footer__nav-title(href='#') #{val.title}
+            ul.footer__nav-list
+              if val.links
+                each link in val.links
+                  li.footer__list-item
+                    a.footer__nav-link(href='#') #{link}
+
+
+
+              //
+                  li.footer__list-item
+                    a.footer__nav-link(href='#') Оборудование для подготовки пульпы
+                  li.footer__list-item
+                    a.footer__nav-link(href='#') Классификация
+                  li.footer__list-item
+                    a.footer__nav-link(href='#') Конвейеры и питатели
+                  li.footer__list-item
+                    a.footer__nav-link(href='#') Насосы
+                  li.footer__list-item
+                    a.footer__nav-link(href='#') Гидрометаллургическое оборудование
+
+
+
+
+    //
       ul.footer__nav-col
         .footer__nav-item
           a.footer__nav-title(href='#') Оборудование
@@ -74,6 +144,7 @@
 
 
 
+
       ul.footer__nav-col
         li.footer__nav-item
           a.footer__nav-title(href='#' class='footer__nav-title_with-mb') Проектирование
@@ -107,6 +178,7 @@
           a.footer__nav-title(href='#' class='footer__nav-title_without-mb') Карьера
         li.footer__nav-item
           a.footer__nav-title(href='#') Контакты
+
 
 
 
