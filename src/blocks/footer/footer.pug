@@ -21,129 +21,18 @@
                   title: "технология",
                   links: ["Минералогия", "Обогащение", "Металлургия", "Технологический аудит", "Рудоподготовка", "Полупромышленная установка", "Запуск фабрики", "Аналитическая химия"],
                 },
-                {
-                  title: "Проектирование",
-                  links: "",
-                },
-                {
-                  title: "Пресс-центр",
-                  links: ["Новости", "Научные публикации", "Научно-практические конференции", "Медиатека", "Фирменный стиль" ],
-                },
-                {
-                  title: "О компании",
-                  links: ["История", "Центры компетенций", "Патенты и лицензии"],
-                },
-                {
-                  title: "проекты",
-                  links: "",
-                },
-                {
-                  title: "Карьера",
-                  links: "",
-                },
-                {
-                  title: "Контакты",
-                  links: "",
-                },
               ]
 
     nav.footer__nav
-      ul.footer__nav-col
-        .footer__nav-item
-          each val in list
+      each val in list
+        ul.footer__nav-col
+          .footer__nav-item
             a.footer__nav-title(href='#') #{val.title}
             ul.footer__nav-list
               if val.links
                 each link in val.links
                   li.footer__list-item
                     a.footer__nav-link(href='#') #{link}
-
-
-
-              //
-                  li.footer__list-item
-                    a.footer__nav-link(href='#') Оборудование для подготовки пульпы
-                  li.footer__list-item
-                    a.footer__nav-link(href='#') Классификация
-                  li.footer__list-item
-                    a.footer__nav-link(href='#') Конвейеры и питатели
-                  li.footer__list-item
-                    a.footer__nav-link(href='#') Насосы
-                  li.footer__list-item
-                    a.footer__nav-link(href='#') Гидрометаллургическое оборудование
-
-
-
-
-    //
-      ul.footer__nav-col
-        .footer__nav-item
-          a.footer__nav-title(href='#') Оборудование
-          ul.footer__nav-list
-            li.footer__list-item
-              a.footer__nav-link(href='#') Флотационное оборудование
-            li.footer__list-item
-              a.footer__nav-link(href='#') Оборудование для подготовки пульпы
-            li.footer__list-item
-              a.footer__nav-link(href='#') Классификация
-            li.footer__list-item
-              a.footer__nav-link(href='#') Конвейеры и питатели
-            li.footer__list-item
-              a.footer__nav-link(href='#') Насосы
-            li.footer__list-item
-              a.footer__nav-link(href='#') Гидрометаллургическое оборудование
-
-
-
-
-      ul.footer__nav-col
-        .footer__nav-item
-          a.footer__nav-title(href='#') Автоматизация
-          ul.footer__nav-list
-            li.footer__list-item
-              a.footer__nav-link(href='#') Автоматизированные системы управления
-            li.footer__list-item
-              a.footer__nav-link(href='#') Опробование и аналитический контроль
-            li.footer__list-item
-              a.footer__nav-link(href='#') Электрооборудование
-
-
-      ul.footer__nav-col
-        .footer__nav-item
-          a.footer__nav-title(href='#') Сервис и ЗИП
-          ul.footer__nav-list
-            li.footer__list-item
-              a.footer__nav-link(href='#') Сервис
-            li.footer__list-item
-              a.footer__nav-link(href='#') ЗИП
-
-
-
-      ul.footer__nav-col
-        .footer__nav-item
-          a.footer__nav-title(href='#') технология
-          ul.footer__nav-list
-            li.footer__list-item
-              a.footer__nav-link(href='#') Минералогия
-            li.footer__list-item
-              a.footer__nav-link(href='#') Обогащение
-            li.footer__list-item
-              a.footer__nav-link(href='#') Металлургия
-            li.footer__list-item
-              a.footer__nav-link(href='#') Технологический аудит
-            li.footer__list-item
-              a.footer__nav-link(href='#') Рудоподготовка
-            li.footer__list-item
-              a.footer__nav-link(href='#') Полупромышленная установка
-            li.footer__list-item
-              a.footer__nav-link(href='#') Запуск фабрики
-            li.footer__list-item
-              a.footer__nav-link(href='#') Аналитическая химия
-
-
-
-
-
 
       ul.footer__nav-col
         li.footer__nav-item
@@ -178,18 +67,6 @@
           a.footer__nav-title(href='#' class='footer__nav-title_without-mb') Карьера
         li.footer__nav-item
           a.footer__nav-title(href='#') Контакты
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     section.footer__contacts-block
