@@ -10,5 +10,25 @@ mixin enrichment(mods)
       allMods = allMods.trim()
     }
 
+
   .enrichment(class=allMods)&attributes(attributes)
-    block
+    acticle.enrichment__item
+      .enrichment__images
+        img(src="#", alt="", class="enrichment__img")
+        +ic-plug.enrichment__ic-plug
+      .enrichment__info
+        header.enrichment__title(class="title-64") Гравитационный метод обогащения
+        p Гравитационный метод обогащения представлен рядом процессов, в которых разделение происходит за счет отличия в характере движения частиц, обладающих различной плотностью, размером и формой в рабочем поле сепаратора.
+      a.enrichment__link подробнее
+        +arrow
+
+    acticle.enrichment__item
+      .enrichment__images
+        img(src="#", alt="", class="enrichment__img")
+        +ic-plug.enrichment__ic-plug
+      .enrichment__info
+        header.enrichment__title(class="title-64") Гравитационный метод обогащения
+        p Гравитационный метод обогащения представлен рядом процессов, в которых разделение происходит за счет отличия в характере движения частиц, обладающих различной плотностью, размером и формой в рабочем поле сепаратора.
+      a.enrichment__link подробнее
+        +arrow
+
