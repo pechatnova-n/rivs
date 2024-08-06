@@ -1,9 +1,6 @@
 .enrichment {
   $comp: &;
   position: relative;
-  @media#{media("<", s)} {
-
-  }
   &__item {
     display: flex;
     justify-content: space-between;
@@ -20,6 +17,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-column-gap: rem(12px);
+      padding: rem(16px) 0 rem(24px);
       &:nth-child(even) {
         flex-direction: row;
         #{$comp}__info {

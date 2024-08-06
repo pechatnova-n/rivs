@@ -14,7 +14,7 @@
     color: $main-text;
     text-transform: uppercase;
     margin-bottom: rem(8px);
-    @media#{media("<", m)} {
+    @media#{media("<", d)} {
       font-size: rem(12px);
     }
   }
@@ -25,12 +25,12 @@
     color: $title-text;
     text-transform: uppercase;
     margin-bottom: rem(8px);
-    @media#{media("<", m)} {
+    @media#{media("<", d)} {
       font-size: rem(20px);
       line-height: rem(22px);
     }
   }
-  @media#{media("<", m)} {
+  @media#{media("<", d)} {
     margin-bottom: rem(24px);
   }
   @media#{media("<", xs)} {

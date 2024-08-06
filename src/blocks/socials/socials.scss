@@ -27,7 +27,7 @@
         transition: all .6s ease-in-out;
       }
     }
-    @media#{media("<", m)}{
+    @media#{media("<", d)}{
       width: rem(40px);
       height: rem(40px);
     }

@@ -45,7 +45,7 @@
     &:hover {
       color: $color-active;
     }
-    @media#{media("<", m)} {
+    @media#{media("<", d)} {
       font-size: rem(10px);
       &_confident {
         grid-area: confident;
@@ -59,7 +59,7 @@
       width: rem(92px);
       height: rem(10px);
     }
-    @media#{media("<", m)} {
+    @media#{media("<", d)} {
       svg {
         width: rem(73px);
         height: rem(8px);
@@ -89,6 +89,7 @@
     display: grid;
     grid-template-columns: 3fr 2fr 1fr;
     font-size: rem(14px);
+    line-height: rem(14px);
     padding: rem(32px) 0;
     @media#{media("<", d)} {
       display: grid;
@@ -98,9 +99,9 @@
             "copy .";
       justify-content: space-between;
       row-gap: 16px;
-
       font-size: rem(10px);
-      padding: rem(16px) 0;
+      line-height: rem(10px);
+      padding: rem(16px) 0 rem(24px);
     }
     @media#{media("<", xs)} {
       grid-template-columns: 1fr;

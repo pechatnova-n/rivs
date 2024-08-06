@@ -15,7 +15,7 @@ $bg-decor: #D8D9DA;
   .inner {
     max-width: 1920px;
     margin: 0 auto;
-    padding: 0 32px;
+    padding: 0 rem(32px);
     position: relative;
 
     @media #{media('<',l)} {
@@ -23,7 +23,7 @@ $bg-decor: #D8D9DA;
     }
 
     @media #{media('<',m)} {
-      padding: 0 10px;
+      padding: 0 rem(10px);
     }
   }
 
