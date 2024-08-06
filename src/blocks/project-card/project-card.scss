@@ -28,10 +28,10 @@
       background-color: #D8D9DA;
       transition: all 0.2s linear;
       #{$comp}__info {
-        display: block;
+
         visibility: visible;
         opacity: 1;
-        transition: all 0.2s linear;
+        transition: all 0.8s linear;
       }
       #{$comp}__header {
         visibility: hidden;
@@ -97,10 +97,11 @@
     }
   }
   &__info {
-    display: none;
+    //display: none;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s 0.5s, opacity 0.5s linear;
+    transition: all 0.2s linear;
+
     color: #1B1B1B;
     font-family: $font-inter;
     font-size: rem(24px);
