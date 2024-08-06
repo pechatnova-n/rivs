@@ -1,16 +1,36 @@
 .enrichment {
   $comp: &;
   position: relative;
+  @media#{media("<", s)} {
+
+  }
   &__item {
     display: flex;
     justify-content: space-between;
     column-gap: rem(20px);
     padding: rem(20px) 0 rem(65px);
+    border-top: 1px solid #D8D9DA;
     &:nth-child(even) {
       flex-direction: row-reverse;
       #{$comp}__info {
         order: 1;
       }
+    }
+    @media#{media("<", d)} {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: rem(12px);
+      &:nth-child(even) {
+        flex-direction: row;
+        #{$comp}__info {
+          order: 0;
+        }
+      }
+
+    }
+    @media#{media("<", s)} {
+      grid-template-columns: 1fr;
+      padding: rem(12px) 0 rem(16px);
     }
   }
   &__info {
@@ -18,11 +38,22 @@
     line-height: rem(30px);
     font-family: $font-inter;
     color: #6F7173;
+    @media#{media("<", d)} {
+      font-size: rem(12px);
+      line-height: rem(18px);
+      margin-bottom: rem(12px);
+    }
   }
   &__title {
     color:#1B1B1B;
     font-family: $druk;
     margin-bottom: rem(20px);
+    @media#{media("<", d)} {
+      font-size: rem(24px);
+      line-height: rem(26px);
+      letter-spacing: 0;
+      margin-bottom: rem(12px);
+    }
   }
   &__images {
     position: relative;
@@ -38,6 +69,18 @@
       transform: translate(-50%, -50%);
       width: rem(154px);
       height: rem(148px);
+    }
+    @media#{media("<", d)} {
+      grid-row: span 2;
+      width: 100%;
+      height: rem(174px);
+      svg {
+        width: rem(69px);
+        height: rem(64px);
+      }
+    }
+    @media#{media("<", s)} {
+      margin-bottom: rem(12px);
     }
   }
   &__img {
@@ -74,6 +117,22 @@
     }
     &:hover {
       opacity: 0.9;
+    }
+    @media#{media("<", d)} {
+      width: 100%;
+      height: rem(34px);
+      padding: 0 rem(8px);
+      font-size: rem(16px);
+      line-height: rem(34px);
+      letter-spacing: 0;
+      align-self: start;
+      svg {
+        top: rem(16px);
+        transform: translateY(-50%);
+        right: rem(10px);
+        width: rem(10px);
+        height: rem(14px);
+      }
     }
   }
 
