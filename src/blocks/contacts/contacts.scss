@@ -30,7 +30,8 @@
       line-height: rem(22px);
     }
   }
-  @media#{media("<", d)} {
+  @media#{media("<", m)} {
+    //padding: rem(24px) 0;
     margin-bottom: rem(24px);
   }
   @media#{media("<", xs)} {
