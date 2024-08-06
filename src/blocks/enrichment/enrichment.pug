@@ -10,25 +10,19 @@ mixin enrichment(mods)
       allMods = allMods.trim()
     }
 
+  -var enrichmentData = [{src: "", title: "Гравитационный метод обогащения", descr: "Гравитационный метод обогащения представлен рядом процессов, в которых разделение происходит за счет отличия в характере движения частиц, обладающих различной плотностью, размером и формой в рабочем поле сепаратора."},{src: "", title: "Магнитный метод обогащения", descr: "Магнитное обогащение основано на возможности разделения минеральных частиц, отличающихся магнитными свойствами, в магнитном поле. Область применения магнитных методов представлена рудами черных, цветных металлов, а также используется для удаления магнитных примесей и регенерации суспензий для тяжелосредной сепарации."},{src: "", title: "Флотационный метод обогащения", descr: "Флотационный метод обогащения основан на различии поверхностных свойств разделяемых минералов и является универсальным, так как все минералы обладают разными поверхностными свойствами."},];
 
   .enrichment(class=allMods)&attributes(attributes)
-    acticle.enrichment__item
-      .enrichment__images
-        img(src="#", alt="", class="enrichment__img")
-        +icPlug.enrichment__ic-plug
-      .enrichment__info
-        header.enrichment__title(class="title-64") Гравитационный метод обогащения
-        p Гравитационный метод обогащения представлен рядом процессов, в которых разделение происходит за счет отличия в характере движения частиц, обладающих различной плотностью, размером и формой в рабочем поле сепаратора.
-      a.enrichment__link подробнее
-        +arrow
+    each el in enrichmentData
+      acticle.enrichment__item
+        .enrichment__images
+          img(src=el.src ? el.src : "", alt="", class="enrichment__img")
+          +icPlug.enrichment__ic-plug
+        .enrichment__info
+          header.enrichment__title(class="title-64") #{el.title}
+          p #{el.descr}
+        a.enrichment__link подробнее
+          +arrow
 
-    acticle.enrichment__item
-      .enrichment__images
-        img(src="#", alt="", class="enrichment__img")
-        +icPlug.enrichment__ic-plug
-      .enrichment__info
-        header.enrichment__title(class="title-64") Гравитационный метод обогащения
-        p Гравитационный метод обогащения представлен рядом процессов, в которых разделение происходит за счет отличия в характере движения частиц, обладающих различной плотностью, размером и формой в рабочем поле сепаратора.
-      a.enrichment__link подробнее
-        +arrow
+
 
