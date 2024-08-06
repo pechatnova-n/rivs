@@ -24,30 +24,30 @@
     cursor: pointer;
     flex-shrink: 0;
     flex-grow: 0;
-    @media#{media("<", d)}{
-      height: rem(320px);
-      width: rem(255px);
-      padding: rem(16px);
-    }
-      &:hover {
+    &:hover {
       background-color: #D8D9DA;
-      transition: background-color 0.5s linear 0.2s;
+      transition: all 0.2s linear;
       #{$comp}__info {
         display: block;
         visibility: visible;
         opacity: 1;
-        transition: opacity 0.5s linear 0.2s;
+        transition: all 0.2s linear;
       }
       #{$comp}__header {
         visibility: hidden;
         opacity: 0;
-        transition: opacity 0.2s linear;
+        transition: all 0.2s linear;
       }
       #{$comp}__content {
         visibility: hidden;
         opacity: 0;
-        transition: opacity 0.2s linear;
+        transition: all 0.2s linear;
       }
+    }
+    @media#{media("<", d)}{
+      height: rem(320px);
+      width: rem(255px);
+      padding: rem(16px);
     }
   }
 
