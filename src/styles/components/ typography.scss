@@ -1,3 +1,14 @@
+.title-108 {
+  font-family: $druk;
+  color: #1B1B1B;
+  font-size: rem(108px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: rem(102px);
+  letter-spacing: rem(2px);
+  text-transform: uppercase;
+}
+
 .title-64 {
   color: var(--1, #62215b);
   font-size: rem(64px);
@@ -15,7 +26,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 110%; /* 39.6px */
-  letter-spacing: 1.08px;
+  letter-spacing: rem(1.08px);
   text-transform: uppercase;
 }
 

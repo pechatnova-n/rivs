@@ -1,3 +1,53 @@
 .main-info {
   position: relative;
+  &__title {
+    position: relative;
+    border-bottom: 1px solid #E23624;
+    padding: 0 rem(210px) rem(32px) 0;
+  }
+  &__title-color {
+    display: block;
+    color: #6F7173;
+  }
+  &__year {
+    position: absolute;
+    bottom: rem(32px);
+    left: 35%;
+    font-family: $font-inter;
+    font-size: rem(20px);
+    line-height: rem(30px);
+    letter-spacing: -2%;
+    font-weight: 400;
+    &-color {
+      color: #E23624;
+    }
+  }
+
+  &__count-contry {
+    padding: rem(140px) 0;
+    display: flex;
+    justify-content: flex-start;
+    column-gap: rem(68px);
+  }
+  &__count {
+    color: #E23624;
+    font-size: rem(290px);
+    line-height: rem(203px);
+    letter-spacing: -6%;
+    font-weight: 700;
+    font-family: $druk;
+
+  }
+  &__txt {
+  }
+  &__txt-span {
+    display: block;
+    font-size: rem(48px);
+    line-height: rem(46px);
+    letter-spacing: -2%;
+    font-weight: 700;
+    font-family: $druk;
+    color: #1B1B1B;
+  }
+
 }
