@@ -11,4 +11,13 @@ mixin announcement(mods)
     }
 
   .announcement(class=allMods)&attributes(attributes)
-    block
+    section.announcement__info
+      header.announcement__header.title-48 АО «НПО «РИВС»
+      p.announcement__text.
+          Российская производственно-инжиниринговая компания, разрабатывающая комплексные решения
+          для обогатительных и металлургических предприятий с достижением гарантированных
+          технологических показателей.
+      +button ("о компании")
+
+    section.announcement__image
+      img.announcement__img(src="/images/planet.png" alt="")

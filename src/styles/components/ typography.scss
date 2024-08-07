@@ -8,13 +8,24 @@
   text-transform: uppercase;
 }
 
+.title-48 {
+  font-family: $druk;
+  color: #1B1B1B;
+  font-size: rem(48px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 39.6px */
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+}
+
 .title-36 {
   color: var(--1, #62215b);
   font-size: rem(36px);
   font-style: normal;
   font-weight: 620;
   line-height: 110%; /* 39.6px */
-  letter-spacing: -1.08px;
+  letter-spacing: 1.08px;
   text-transform: uppercase;
 }
 

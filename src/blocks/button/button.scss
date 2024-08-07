@@ -17,7 +17,7 @@
   color :#FFF;
   padding: 0 rem(20px);
   letter-spacing: 0;
-  svg {
+  &::after {
     display: block;
     position: absolute;
     top: rem(30px);
@@ -25,10 +25,15 @@
     right: rem(20px);
     width: rem(17px);
     height: rem(11px);
+    content: "";
+    background-image: url('data:image/svg+xml, <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M0.671875 7.00026L0.671875 5.00026L13.5002 5.00026L10.2577 1.75773L11.6719 0.343518L17.3287 6.00037L11.6719 11.6572L10.2577 10.243L13.5004 7.00026L0.671875 7.00026Z" fill="white"/> </svg>');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
 
   &:hover {
-    opacity: 0.9;
+    opacity: 0.8;
   }
   &:disabled {
     background: #f0e7ef;
@@ -44,7 +49,7 @@
     line-height: rem(34px);
     letter-spacing: 0;
     align-self: start;
-    svg {
+    &::after {
       top: rem(16px);
       transform: translateY(-50%);
       right: rem(10px);

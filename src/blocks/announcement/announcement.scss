@@ -1,3 +1,34 @@
 .announcement {
   position: relative;
+  &__info {
+    margin-bottom: rem(74px);
+  }
+  &__header {
+    margin-bottom: rem(20px);
+  }
+  &__text {
+    font-family: $font-inter;
+    font-size: rem(20px);
+    line-height: rem(30px);
+    letter-spacing: -1.08px;
+    color: #1B1B1B;
+    margin-bottom: rem(20px);
+    width: rem(646px);
+  }
+  &__button {
+
+  }
+
+
+  &__image {
+    position: relative;
+    width: rem(850px);
+    left: rem(-32px);
+    bottom: 0;
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
 }

@@ -1,3 +1,6 @@
 .main-screen {
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  column-gap: rem(55px);
 }
