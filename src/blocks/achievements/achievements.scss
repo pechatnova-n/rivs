@@ -5,6 +5,15 @@
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   grid-gap: rem(20px);
+  @media#{media('<', d)} {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: rem(8px);
+  }
+  @media#{media('<', m)} {
+    overflow-x: scroll;
+    @include scrollbar-hidden;
+  }
+
   &__item {
     display: flex;
     flex-direction: column;
@@ -30,6 +39,23 @@
         height: rem(96px);
       }
     }
+    @media#{media('<', d)} {
+      justify-content: flex-start;
+      row-gap: 8px;
+      padding: rem(16px);
+      height: rem(380px);
+      &_gray {
+        grid-column: span 1;
+        #{$comp}__image {
+          width: rem(168px);
+          height: rem(40px);
+        }
+      }
+    }
+    @media#{media('<', m)} {
+      width: rem(255px);
+      height: rem(380px);
+    }
   }
 
   &__title {
@@ -41,11 +67,21 @@
     line-height: rem(35px);
     letter-spacing: -2%;
     text-transform: uppercase;
+    @media#{media('<', d)} {
+      font-size: rem(20px);
+      line-height: rem(22px);
+    }
   }
   &__image {
     width: rem(151px);
     height: rem(116px);
-    align-self: center;
+    align-self: end;
+    @media#{media('<', d)} {
+      order: 1;
+      width: rem(115px);
+      height: rem(86px);
+      align-self: end;
+    }
   }
   &__img {
     width: 100%;
@@ -55,6 +91,12 @@
     display: flex;
     justify-content: space-between;
     column-gap: rem(18px);
+    flex-grow: 1;
+    @media#{media('<', d)} {
+      flex-direction: column;
+      row-gap: rem(8px);
+      justify-content: flex-start;
+    }
   }
   &__descr {
     font-family: $font-inter;
@@ -64,5 +106,9 @@
     font-weight: 400;
     line-height: rem(30px);
     letter-spacing: -1%;
+    @media#{media('<', d)} {
+      font-size: rem(12px);
+      line-height: rem(18px);
+    }
   }
 }

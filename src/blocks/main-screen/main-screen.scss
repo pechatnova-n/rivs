@@ -4,11 +4,8 @@
   display: flex;
   justify-content: space-between;
   column-gap: rem(55px);
-  & > .main-info {
-    overflow-y: scroll;
-    @include scrollbar-hidden;
-  }
-  & > .announcement {
-    position: sticky;
+  padding: rem(80px) 0 rem(25px);
+  @media#{media('<', d)} {
+    flex-direction: column;
   }
 }

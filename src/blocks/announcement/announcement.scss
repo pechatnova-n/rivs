@@ -1,11 +1,20 @@
 .announcement {
   position: sticky;
-
+  @media#{media('<', d)} {
+    position: relative;
+  }
   &__info {
     margin-bottom: rem(74px);
+    @media#{media('<', d)} {
+      margin-bottom: rem(48px);
+    }
   }
   &__header {
     margin-bottom: rem(20px);
+    @media#{media('<', d)} {
+      font-size: rem(24px);
+      line-height: rem(26px);
+    }
   }
   &__text {
     font-family: $font-inter;
@@ -15,6 +24,12 @@
     color: #1B1B1B;
     margin-bottom: rem(20px);
     width: rem(646px);
+    @media#{media('<', d)} {
+      font-size: rem(14px);
+      line-height: rem(21px);
+      margin-bottom: 0;
+      width: rem(536px);
+    }
   }
   &__button {
 
@@ -26,6 +41,10 @@
     width: rem(850px);
     left: rem(-32px);
     bottom: 0;
+    @media#{media('<', d)} {
+      width: 100%;
+      left: 0;
+    }
   }
   &__img {
     display: block;
