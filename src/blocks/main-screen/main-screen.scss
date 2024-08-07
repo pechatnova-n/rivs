@@ -1,6 +1,14 @@
 .main-screen {
   position: relative;
+  height: 100vh;
   display: flex;
   justify-content: space-between;
   column-gap: rem(55px);
+  & > .main-info {
+    overflow-y: scroll;
+    @include scrollbar-hidden;
+  }
+  & > .announcement {
+    position: sticky;
+  }
 }

@@ -1,5 +1,6 @@
 .announcement {
-  position: relative;
+  position: sticky;
+
   &__info {
     margin-bottom: rem(74px);
   }

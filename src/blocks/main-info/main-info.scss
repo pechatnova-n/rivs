@@ -1,5 +1,8 @@
 .main-info {
   position: relative;
+  overflow-y: scroll;
+  @include scrollbar-hidden;
+
   &__title {
     position: relative;
     border-bottom: 1px solid #E23624;
