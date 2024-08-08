@@ -1,0 +1,41 @@
+.count-contry {
+  padding: rem(140px) 0;
+  display: flex;
+  justify-content: flex-start;
+  column-gap: rem(68px);
+  @media#{media('<', d)} {
+    padding: rem(24px) 0 rem(48px) rem(24px);
+    column-gap: rem(16px);
+  }
+
+  &__count {
+    color: #E23624;
+    font-size: rem(290px);
+    line-height: rem(203px);
+    letter-spacing: -6%;
+    font-weight: 700;
+    font-family: $druk;
+    @media#{media('<', d)} {
+      font-size: rem(140px);
+      line-height: rem(112px);
+      letter-spacing: -8%;
+    }
+  }
+  &__txt {
+  }
+  &__txt-span {
+    display: block;
+    font-size: rem(48px);
+    line-height: rem(46px);
+    letter-spacing: -2%;
+    font-weight: 700;
+    font-family: $druk;
+    color: #1B1B1B;
+    text-transform: uppercase;
+    @media#{media('<', d)} {
+      font-size: rem(24px);
+      line-height: rem(26px);
+    }
+  }
+
+}

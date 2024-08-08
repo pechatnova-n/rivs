@@ -1,3 +1,7 @@
 .header {
-  flex: 0 1;
+  flex-shrink: 0;
+  height: rem(100px);
+  width: 100vw;
+  position: fixed;
+
 }

@@ -1,0 +1,39 @@
+.main-title {
+  position: relative;
+  border-bottom: 1px solid #E23624;
+  padding: 0 rem(210px) rem(32px) 0;
+  @media#{media('<', d)} {
+    padding: 0 rem(100px) rem(16px) 0;
+  }
+  &__title {
+    position: relative;
+    @media#{media('<', d)} {
+      font-size: rem(24px);
+      line-height: rem(26px);
+    }
+  }
+  &__title-color {
+    display: block;
+    color: #6F7173;
+  }
+  &__year {
+    position: absolute;
+    bottom: rem(32px);
+    left: 35%;
+    font-family: $font-inter;
+    font-size: rem(20px);
+    line-height: rem(30px);
+    letter-spacing: -2%;
+    font-weight: 400;
+    &-color {
+      color: #E23624;
+    }
+    @media#{media('<', d)} {
+      bottom: rem(16px);
+      right: 0;
+      font-size: rem(14px);
+      line-height: rem(21px);
+      text-align: right;
+    }
+  }
+}

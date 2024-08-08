@@ -10,6 +10,26 @@ mixin main-screen(mods)
       allMods = allMods.trim()
     }
 
-  .main-screen(class=allMods)&attributes(attributes)
+  .main-screen.main-screen_desctop(class=allMods)&attributes(attributes)
+    section.main-screen__left
+      .main-screen__wrap
+        +announcement
+        +button("О компании")
+      +announcement-img
+
+    section.main-screen__right
+      +main-title
+      +count-contry
+      +achievements
+
+
+  .main-screen.main-screen_mobile(class=allMods)&attributes(attributes)
     +announcement
-    +main-info
+    +main-title
+    section.main-screen_border
+      +count-contry
+      +announcement-img
+    +achievements
+    +button("О компании")
+
+

@@ -2,12 +2,7 @@
   position: sticky;
   @media#{media('<', d)} {
     position: relative;
-  }
-  &__info {
-    margin-bottom: rem(74px);
-    @media#{media('<', d)} {
-      margin-bottom: rem(48px);
-    }
+    margin-bottom: rem(48px);
   }
   &__header {
     margin-bottom: rem(20px);
@@ -32,23 +27,10 @@
     }
   }
   &__button {
-
-  }
-
-
-  &__image {
-    position: relative;
-    width: rem(850px);
-    left: rem(-32px);
-    bottom: 0;
     @media#{media('<', d)} {
-      width: 100%;
-      left: 0;
+      display: none !important;
     }
   }
-  &__img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
-  }
+
+
 }
