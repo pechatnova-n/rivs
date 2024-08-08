@@ -56,6 +56,7 @@
     width: rem(982px);
     position: relative;
     padding-bottom: rem(25px);
+    padding-left: rem(32px);
     @media#{media('<', d)} {
       overflow-y: hidden;
       &:first-child {
