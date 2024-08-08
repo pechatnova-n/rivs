@@ -10,7 +10,7 @@ mixin main-screen(mods)
       allMods = allMods.trim()
     }
 
-  .main-screen.main-screen_desctop(class=allMods)&attributes(attributes)
+  .main-screen.main-screen_desctop.inner(class=allMods)&attributes(attributes)
     section.main-screen__left
       .main-screen__wrap
         +announcement

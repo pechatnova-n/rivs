@@ -1,6 +1,7 @@
 .enrichment {
   $comp: &;
   position: relative;
+  background-color: #fff;
   &__item {
     display: flex;
     justify-content: space-between;

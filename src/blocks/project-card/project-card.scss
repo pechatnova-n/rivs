@@ -5,6 +5,7 @@
   justify-content: space-between;
   column-gap: rem(20px);
   padding-bottom: rem(140px);
+  background-color: #fff;
   @media#{media("<", d)}{
     overflow-x: scroll;
     column-gap: rem(8px);

@@ -1,9 +1,7 @@
 .main-screen {
   position: relative;
-  height: rem(980px);
   display: flex;
-  justify-content: space-between;
-  column-gap: rem(55px);
+  justify-content: flex-end;
   padding: rem(80px) 0 rem(25px);
   &_border {
     display: flex;
@@ -41,7 +39,11 @@
     }
   }
   &__left {
-    position: relative;
+    position: fixed;
+    top: rem(100px);
+    left: rem(32px);
+
+    width: rem(883px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -53,9 +55,7 @@
   &__right {
     width: rem(982px);
     position: relative;
-    overflow-y: scroll;
     padding-bottom: rem(25px);
-    @include scrollbar-hidden;
     @media#{media('<', d)} {
       overflow-y: hidden;
       &:first-child {

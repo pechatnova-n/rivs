@@ -35,7 +35,7 @@ mixin enrichment(mods)
                 }
               ]
 
-  .enrichment(class=allMods)&attributes(attributes)
+  .enrichment.inner(class=allMods)&attributes(attributes)
     each el in enrichmentData
       acticle.enrichment__item
         .enrichment__images

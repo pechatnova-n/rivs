@@ -10,7 +10,7 @@ mixin project-card(mods)
       allMods = allMods.trim()
     }
 
-  .project-card(class=allMods)&attributes(attributes)
+  .project-card.inner(class=allMods)&attributes(attributes)
     article.project-card__item
       header.project-card__header Инжиниринговый центр
       .project-card__info
